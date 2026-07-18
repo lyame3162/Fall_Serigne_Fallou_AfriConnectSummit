@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -23,6 +23,260 @@
 </head>
 
 <body>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header id="navbar" class="navbar">
+        <nav class="navbar__container" aria-label="Navigation principale">
+            <a href="index.html" class="navbar__logo" aria-label="Accueil AfriConnect Summit">
+                <i class="bi bi-globe2"></i>
+                <span>AfriConnect <span class="navbar__logo-year">2026</span></span>
+            </a>
+
+            <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Menu de navigation" aria-expanded="false">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+
+            <ul class="navbar__links" id="navLinks" role="menubar">
+                <li role="none"><a href="index.html" class="navbar__link active" role="menuitem">Accueil</a></li>
+                <li role="none"><a href="programme.html" class="navbar__link" role="menuitem">Programme</a></li>
+                <li role="none"><a href="intervenants.html" class="navbar__link" role="menuitem">Intervenants</a></li>
+                <li role="none"><a href="contact.html" class="navbar__link" role="menuitem">Contact</a></li>
+                <li role="none">
+                    <button id="themeToggle" class="navbar__theme-btn" aria-label="Activer le mode clair">
+                        <i class="bi bi-moon-stars" id="themeIcon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== SECTION HERO ===== -->
+        <section class="hero" id="hero">
+            <div class="hero__content">
+                <h1 class="hero__title animate-fade-in">L'innovation africaine<br><span
+                        class="hero__title-accent">n'attend plus.</span></h1>
+                <p class="hero__subtitle animate-fade-in">Dakar, Sénégal · 14–16 Décembre 2026</p>
+                <div class="hero__cta animate-fade-in">
+                    <a href="contact.html" class="btn btn--primary">S'inscrire <i class="bi bi-arrow-right"></i></a>
+                    <a href="programme.html" class="btn btn--outline">Voir le programme</a>
+                </div>
+                <!-- Compte à rebours -->
+                <div class="countdown animate-fade-in" id="countdown">
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="countdown-days">00</span>
+                        <span class="countdown__label">Jours</span>
+                    </div>
+                    <div class="countdown__separator">:</div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="countdown-hours">00</span>
+                        <span class="countdown__label">Heures</span>
+                    </div>
+                    <div class="countdown__separator">:</div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="countdown-minutes">00</span>
+                        <span class="countdown__label">Minutes</span>
+                    </div>
+                    <div class="countdown__separator">:</div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="countdown-seconds">00</span>
+                        <span class="countdown__label">Secondes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__overlay"></div>
+        </section>
+
+        <!-- ===== SECTION CHIFFRES CLÉS ===== -->
+        <section class="stats section" id="stats">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll">AfriConnect Summit en chiffres</h2>
+                <div class="stats__grid">
+                    <div class="stats__item animate-on-scroll">
+                        <span class="stats__number" data-target="1200">0</span>
+                        <span class="stats__suffix">+</span>
+                        <span class="stats__label">Participants</span>
+                    </div>
+                    <div class="stats__item animate-on-scroll">
+                        <span class="stats__number" data-target="48">0</span>
+                        <span class="stats__suffix">+</span>
+                        <span class="stats__label">Intervenants</span>
+                    </div>
+                    <div class="stats__item animate-on-scroll">
+                        <span class="stats__number" data-target="3">0</span>
+                        <span class="stats__suffix"></span>
+                        <span class="stats__label">Jours de conférence</span>
+                    </div>
+                    <div class="stats__item animate-on-scroll">
+                        <span class="stats__number" data-target="12">0</span>
+                        <span class="stats__suffix">+</span>
+                        <span class="stats__label">Pays représentés</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION POURQUOI PARTICIPER ===== -->
+        <section class="why section" id="why">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll">Pourquoi participer ?</h2>
+                <div class="why__grid">
+                    <article class="why__card animate-on-scroll">
+                        <div class="why__icon"><i class="bi bi-people-fill"></i></div>
+                        <h3 class="why__title">Networking de haut niveau</h3>
+                        <p class="why__desc">Rencontrez les acteurs clés de l'écosystème tech africain : fondateurs,
+                            investisseurs, CTOs et décideurs politiques.</p>
+                    </article>
+                    <article class="why__card animate-on-scroll">
+                        <div class="why__icon"><i class="bi bi-lightbulb-fill"></i></div>
+                        <h3 class="why__title">Inspiration & Innovation</h3>
+                        <p class="why__desc">Assistez à des keynotes inspirantes et des ateliers pratiques sur les
+                            tendances qui façonnent le futur du continent.</p>
+                    </article>
+                    <article class="why__card animate-on-scroll">
+                        <div class="why__icon"><i class="bi bi-briefcase-fill"></i></div>
+                        <h3 class="why__title">Opportunités business</h3>
+                        <p class="why__desc">Connectez-vous avec des investisseurs et partenaires potentiels pour
+                            accélérer vos projets et développer votre réseau.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION INTERVENANTS VEDETTES ===== -->
+        <section class="speakers-preview section" id="speakers-preview">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll">Intervenants vedettes</h2>
+                <div class="speakers-preview__grid">
+                    <article class="speaker-card animate-on-scroll">
+                        <div class="speaker-card__img-wrapper">
+                            <img src="images/speaker-1.jpg"
+                                alt="Portrait de Aïssata Fall, experte en intelligence artificielle"
+                                class="speaker-card__img" loading="lazy">
+                        </div>
+                        <h3 class="speaker-card__name">Aïssata Fall</h3>
+                        <p class="speaker-card__role">IA & Machine Learning</p>
+                        <p class="speaker-card__country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+                    </article>
+                    <article class="speaker-card animate-on-scroll">
+                        <div class="speaker-card__img-wrapper">
+                            <img src="images/speaker-2.jpg"
+                                alt="Portrait de Dior Gueye, entrepreneur et fondateur de startups"
+                                class="speaker-card__img" loading="lazy">
+                        </div>
+                        <h3 class="speaker-card__name">Dior Gueye</h3>
+                        <p class="speaker-card__role">Entrepreneuriat & Investissement</p>
+                        <p class="speaker-card__country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+                    </article>
+                    <article class="speaker-card animate-on-scroll">
+                        <div class="speaker-card__img-wrapper">
+                            <img src="images/speaker-3.jpg" alt="Portrait de Fatou Fall, designer UX/UI"
+                                class="speaker-card__img" loading="lazy">
+                        </div>
+                        <h3 class="speaker-card__name">Fatou Fall</h3>
+                        <p class="speaker-card__role">Design & Expérience utilisateur</p>
+                        <p class="speaker-card__country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+                    </article>
+                    <article class="speaker-card animate-on-scroll">
+                        <div class="speaker-card__img-wrapper">
+                            <img src="images/speaker-4.jpg" alt="Portrait de Cheikh Fall, expert en cybersécurité"
+                                class="speaker-card__img" loading="lazy">
+                        </div>
+                        <h3 class="speaker-card__name">Cheikh Fall</h3>
+                        <p class="speaker-card__role">Cybersécurité & Cloud</p>
+                        <p class="speaker-card__country"><i class="bi bi-geo-alt"></i> Sénégal</p>
+                    </article>
+                </div>
+                <div class="speakers-preview__cta animate-on-scroll">
+                    <a href="intervenants.html" class="btn btn--primary">Voir tous les intervenants <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION SPONSORS ===== -->
+        <section class="sponsors section" id="sponsors">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll">Nos sponsors</h2>
+                <div class="sponsors__levels">
+                    <div class="sponsors__level sponsors__level--gold animate-on-scroll">
+                        <h3 class="sponsors__level-title">Or</h3>
+                        <div class="sponsors__logos">
+                            <img src="images/sponsor-gold-1.svg" alt="Logo TechAfrique"
+                                class="sponsors__logo sponsors__logo--gold" loading="lazy">
+                            <img src="images/sponsor-gold-2.svg" alt="Logo Orange Digital"
+                                class="sponsors__logo sponsors__logo--gold" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="sponsors__level sponsors__level--silver animate-on-scroll">
+                        <h3 class="sponsors__level-title">Argent</h3>
+                        <div class="sponsors__logos">
+                            <img src="images/sponsor-silver-1.svg" alt="Logo Flutterwave"
+                                class="sponsors__logo sponsors__logo--silver" loading="lazy">
+                            <img src="images/sponsor-silver-2.svg" alt="Logo Andela"
+                                class="sponsors__logo sponsors__logo--silver" loading="lazy">
+                            <img src="images/sponsor-silver-3.svg" alt="Logo Jumia"
+                                class="sponsors__logo sponsors__logo--silver" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="sponsors__level sponsors__level--bronze animate-on-scroll">
+                        <h3 class="sponsors__level-title">Bronze</h3>
+                        <div class="sponsors__logos">
+                            <img src="images/sponsor-bronze-1.svg" alt="Logo Yoco"
+                                class="sponsors__logo sponsors__logo--bronze" loading="lazy">
+                            <img src="images/sponsor-bronze-2.svg" alt="Logo Twiga Foods"
+                                class="sponsors__logo sponsors__logo--bronze" loading="lazy">
+                            <img src="images/sponsor-bronze-3.svg" alt="Logo Paystack"
+                                class="sponsors__logo sponsors__logo--bronze" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h4 class="footer__title">AfriConnect Summit</h4>
+                    <p class="footer__text">La conférence panafricaine qui réunit développeurs, entrepreneurs et
+                        investisseurs pour façonner l'avenir tech du continent.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                        <li><a href="contact.html">Inscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Suivez-nous</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Twitter/X" class="footer__social-link"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="footer__social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" class="footer__social-link"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="footer__social-link"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="GitHub" class="footer__social-link"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="year"></span> Serigne Fallou Fall AfriConnect Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </footer>
+
+    <script src="js/main.js"></script>
 
 </body>
 

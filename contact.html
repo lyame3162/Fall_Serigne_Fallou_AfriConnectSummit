@@ -23,6 +23,255 @@
 
 <body>
 
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header id="navbar" class="navbar">
+        <nav class="navbar__container" aria-label="Navigation principale">
+            <a href="index.html" class="navbar__logo" aria-label="Accueil AfriConnect Summit">
+                <i class="bi bi-globe2"></i>
+                <span>AfriConnect <span class="navbar__logo-year">2026</span></span>
+            </a>
+            <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Menu de navigation" aria-expanded="false">
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+                <span class="navbar__hamburger-line"></span>
+            </button>
+            <ul class="navbar__links" id="navLinks" role="menubar">
+                <li role="none"><a href="index.html" class="navbar__link" role="menuitem">Accueil</a></li>
+                <li role="none"><a href="programme.html" class="navbar__link" role="menuitem">Programme</a></li>
+                <li role="none"><a href="intervenants.html" class="navbar__link" role="menuitem">Intervenants</a></li>
+                <li role="none"><a href="contact.html" class="navbar__link active" role="menuitem">Contact</a></li>
+                <li role="none">
+                    <button id="themeToggle" class="navbar__theme-btn" aria-label="Activer le mode clair">
+                        <i class="bi bi-moon-stars" id="themeIcon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ===== HERO INTERNE ===== -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-hero__title">Contact & Inscription</h1>
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <ol class="breadcrumb__list">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><span aria-current="page">Contact</span></li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- ===== FORMULAIRE D'INSCRIPTION ===== -->
+        <section class="contact section">
+            <div class="container">
+                <div class="contact__layout">
+                    <!-- Colonne gauche : Formulaire -->
+                    <div class="contact__form-col animate-on-scroll">
+                        <h2 class="contact__form-title">Inscrivez-vous à l'événement</h2>
+                        <form id="registrationForm" class="form" novalidate>
+                            <div class="form__group">
+                                <label for="fullname" class="form__label">Nom complet <span class="form__required">*</span></label>
+                                <input type="text" id="fullname" name="fullname" class="form__input" placeholder="Votre nom et prénom" required minlength="2">
+                                <span class="form__error" id="fullname-error"></span>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">Email <span class="form__required">*</span></label>
+                                <input type="email" id="email" name="email" class="form__input" placeholder="vous@exemple.com" required>
+                                <span class="form__error" id="email-error"></span>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="phone" class="form__label">Téléphone <span class="form__required">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form__input" placeholder="+221 77 123 45 67" required>
+                                <span class="form__error" id="phone-error"></span>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="participation" class="form__label">Type de participation <span class="form__required">*</span></label>
+                                <select id="participation" name="participation" class="form__input" required>
+                                    <option value="">Sélectionnez un type</option>
+                                    <option value="developpeur">Développeur / Développeuse</option>
+                                    <option value="entrepreneur">Entrepreneur / Fondateur</option>
+                                    <option value="investisseur">Investisseur</option>
+                                    <option value="etudiant">Étudiant / Étudiante</option>
+                                    <option value="journaliste">Journaliste / Média</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <span class="form__error" id="participation-error"></span>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="country" class="form__label">Pays <span class="form__required">*</span></label>
+                                <select id="country" name="country" class="form__input" required>
+                                    <option value="">Sélectionnez votre pays</option>
+                                    <option value="senegal">Sénégal</option>
+                                    <option value="cote-ivoire">Côte d'Ivoire</option>
+                                    <option value="ghana">Ghana</option>
+                                    <option value="nigeria">Nigeria</option>
+                                    <option value="kenya">Kenya</option>
+                                    <option value="maroc">Maroc</option>
+                                    <option value="tunisie">Tunisie</option>
+                                    <option value="cameroun">Cameroun</option>
+                                    <option value="rwanda">Rwanda</option>
+                                    <option value="tanzanie">Tanzanie</option>
+                                    <option value="afrique-sud">Afrique du Sud</option>
+                                    <option value="egypte">Égypte</option>
+                                    <option value="ethiopie">Éthiopie</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                                <span class="form__error" id="country-error"></span>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="message" class="form__label">Message / Motivation <span class="form__required">*</span></label>
+                                <textarea id="message" name="message" class="form__input form__textarea" placeholder="Dites-nous pourquoi vous souhaitez participer..." required minlength="20"></textarea>
+                                <span class="form__error" id="message-error"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary form__submit">
+                                <i class="bi bi-send"></i> Envoyer ma candidature
+                            </button>
+
+                            <!-- Message de succès (caché par défaut) -->
+                            <div id="formSuccess" class="form__success" hidden>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <p>Votre inscription a bien été envoyée ! Nous vous contacterons dans les plus brefs délais.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Colonne droite : Informations -->
+                    <div class="contact__info-col animate-on-scroll">
+                        <h2 class="contact__form-title">Informations pratiques</h2>
+
+                        <article class="contact__info-card">
+                            <i class="bi bi-geo-alt-fill contact__info-icon"></i>
+                            <div>
+                                <h3>Lieu</h3>
+                                <p>Centre de Conférences Abdou Diouf<br>Dakar, Sénégal</p>
+                            </div>
+                        </article>
+
+                        <article class="contact__info-card">
+                            <i class="bi bi-calendar-event-fill contact__info-icon"></i>
+                            <div>
+                                <h3>Dates</h3>
+                                <p>14 – 16 Décembre 2026</p>
+                            </div>
+                        </article>
+
+                        <article class="contact__info-card">
+                            <i class="bi bi-envelope-fill contact__info-icon"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contact@africonnect-summit.africa</p>
+                            </div>
+                        </article>
+
+                        <article class="contact__info-card">
+                            <i class="bi bi-telephone-fill contact__info-icon"></i>
+                            <div>
+                                <h3>Téléphone</h3>
+                                <p>+221 33 800 12 34</p>
+                            </div>
+                        </article>
+
+                        <!-- Carte Google Maps -->
+                        <div class="contact__map">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.674676689478!2d-17.4711216853465!3d14.69365668972333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec17263a1e8b7e1%3A0x6b8c8f8b6c8f8b6c!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1"
+                                width="100%" 
+                                height="250" 
+                                style="border:0; border-radius: var(--radius-md);" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                title="Carte de Dakar, Sénégal">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ EN ACCORDÉON CSS PUR ===== -->
+        <section class="faq section">
+            <div class="container">
+                <h2 class="section__title animate-on-scroll">Questions fréquentes</h2>
+                <div class="faq__list">
+                    <!-- Question 1 -->
+                    <details class="faq__item" name="faq">
+                        <summary class="faq__question">Comment puis-je m'inscrire ?</summary>
+                        <p class="faq__answer">Il vous suffit de remplir le formulaire d'inscription ci-contre. Un email de confirmation vous sera envoyé sous 48h avec les détails de votre participation.</p>
+                    </details>
+
+                    <!-- Question 2 -->
+                    <details class="faq__item" name="faq">
+                        <summary class="faq__question">Y a-t-il des frais d'inscription ?</summary>
+                        <p class="faq__answer">L'inscription est gratuite pour les étudiants et les développeurs indépendants. Un tarif préférentiel de 50€ s'applique pour les professionnels et de 200€ pour les entreprises.</p>
+                    </details>
+
+                    <!-- Question 3 -->
+                    <details class="faq__item" name="faq">
+                        <summary class="faq__question">Le transport et l'hébergement sont-ils pris en charge ?</summary>
+                        <p class="faq__answer">Nous offrons des bourses de voyage pour les participants sélectionnés. L'hébergement peut être réservé à tarif préférentiel via nos partenaires hôteliers à Dakar.</p>
+                    </details>
+
+                    <!-- Question 4 -->
+                    <details class="faq__item" name="faq">
+                        <summary class="faq__question">Les conférences seront-elles en anglais ou en français ?</summary>
+                        <p class="faq__answer">Toutes les sessions seront disponibles en français et en anglais avec traduction simultanée. Certains ateliers seront également proposés en bilingue.</p>
+                    </details>
+
+                    <!-- Question 5 -->
+                    <details class="faq__item" name="faq">
+                        <summary class="faq__question">Puis-je proposer un talk ou un atelier ?</summary>
+                        <p class="faq__answer">Oui ! L'appel à propositions (CFP) est ouvert jusqu'au 30 septembre 2026. Remplissez le formulaire dédié sur notre site et notre comité de sélection étudiera votre proposition.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h4 class="footer__title">AfriConnect Summit</h4>
+                    <p class="footer__text">La conférence panafricaine qui réunit développeurs, entrepreneurs et investisseurs.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="intervenants.html">Intervenants</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Suivez-nous</h4>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Twitter/X" class="footer__social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="footer__social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" class="footer__social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="footer__social-link"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="GitHub" class="footer__social-link"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="year"></span> Serigne Fallou Fall AfriConnect Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

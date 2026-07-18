@@ -22,7 +22,317 @@
 </head>
 
 <body>
+        <!-- ===== HEADER / NAVBAR ===== -->
+        <header id="navbar" class="navbar">
+            <nav class="navbar__container" aria-label="Navigation principale">
+                <a href="index.html" class="navbar__logo" aria-label="Accueil AfriConnect Summit">
+                    <i class="bi bi-globe2"></i>
+                    <span>AfriConnect <span class="navbar__logo-year">2026</span></span>
+                </a>
+                <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Menu de navigation"
+                    aria-expanded="false">
+                    <span class="navbar__hamburger-line"></span>
+                    <span class="navbar__hamburger-line"></span>
+                    <span class="navbar__hamburger-line"></span>
+                </button>
+                <ul class="navbar__links" id="navLinks" role="menubar">
+                    <li role="none"><a href="index.html" class="navbar__link" role="menuitem">Accueil</a></li>
+                    <li role="none"><a href="programme.html" class="navbar__link active" role="menuitem">Programme</a>
+                    </li>
+                    <li role="none"><a href="intervenants.html" class="navbar__link" role="menuitem">Intervenants</a>
+                    </li>
+                    <li role="none"><a href="contact.html" class="navbar__link" role="menuitem">Contact</a></li>
+                    <li role="none">
+                        <button id="themeToggle" class="navbar__theme-btn" aria-label="Activer le mode clair">
+                            <i class="bi bi-moon-stars" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
+        <main>
+            <!-- ===== HERO INTERNE ===== -->
+            <section class="page-hero">
+                <div class="container">
+                    <h1 class="page-hero__title">Programme</h1>
+                    <!-- Fil d'Ariane -->
+                    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                        <ol class="breadcrumb__list">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><span aria-current="page">Programme</span></li>
+                        </ol>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- ===== ONGLETS 3 JOURS ===== -->
+            <section class="schedule section">
+                <div class="container">
+                    <h2 class="section__title animate-on-scroll">Planning par jour</h2>
+
+                    <!-- Boutons d'onglets -->
+                    <div class="tabs" role="tablist" aria-label="Planning des 3 jours">
+                        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="day1"
+                            data-day="1">Jour 1 · 14 Déc</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="day2" data-day="2">Jour
+                            2 · 15 Déc</button>
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="day3" data-day="3">Jour
+                            3 · 16 Déc</button>
+                    </div>
+
+                    <!-- Contenu Jour 1 -->
+                    <div class="tab-content active" id="day1" role="tabpanel">
+                        <table class="schedule__table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 09:30</td>
+                                    <td>Accueil & Café</td>
+                                    <td>—</td>
+                                    <td>Hall Central</td>
+                                </tr>
+                                <tr>
+                                    <td>09:30 - 10:30</td>
+                                    <td>Keynote : L'IA au service du développement africain</td>
+                                    <td>Aïssata Fall</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>10:45 - 12:00</td>
+                                    <td>Panel : Financement des startups tech en Afrique</td>
+                                    <td>Dior Gueye + Panel</td>
+                                    <td>Salle S维权1</td>
+                                </tr>
+                                <tr>
+                                    <td>12:00 - 13:30</td>
+                                    <td>Pause déjeuner & Networking</td>
+                                    <td>—</td>
+                                    <td>Espace Restauration</td>
+                                </tr>
+                                <tr>
+                                    <td>13:30 - 15:00</td>
+                                    <td>Atelier : Introduction au Machine Learning</td>
+                                    <td>Mme Fall</td>
+                                    <td>Salle Atelier A</td>
+                                </tr>
+                                <tr>
+                                    <td>15:15 - 16:30</td>
+                                    <td>Table ronde : Femmes dans la tech</td>
+                                    <td>Fatou Fall</td>
+                                    <td>Salle Conférence 2</td>
+                                </tr>
+                                <tr>
+                                    <td>16:45 - 18:00</td>
+                                    <td>Demo Day : Startups innovantes</td>
+                                    <td>5 startups sélectionnées</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>18:30 - 20:00</td>
+                                    <td>Cocktail Networking</td>
+                                    <td>—</td>
+                                    <td>Terrasse Panoramique</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Contenu Jour 2 -->
+                    <div class="tab-content" id="day2" role="tabpanel" hidden>
+                        <table class="schedule__table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 10:00</td>
+                                    <td>Keynote : La cybersécurité à l'ère du cloud</td>
+                                    <td>Cheikh Fall</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 - 11:30</td>
+                                    <td>Atelier : DevOps & CI/CD pratiques</td>
+                                    <td>Ahmadou</td>
+                                    <td>Salle Atelier B</td>
+                                </tr>
+                                <tr>
+                                    <td>11:45 - 13:00</td>
+                                    <td>Panel : Design thinking pour produits africains</td>
+                                    <td>Fatou Fall + Panel</td>
+                                    <td>Salle Conférence 1</td>
+                                </tr>
+                                <tr>
+                                    <td>13:00 - 14:30</td>
+                                    <td>Pause déjeuner & Speed networking</td>
+                                    <td>—</td>
+                                    <td>Espace Restauration</td>
+                                </tr>
+                                <tr>
+                                    <td>14:30 - 16:00</td>
+                                    <td>Masterclass : Blockchain & DeFi en Afrique</td>
+                                    <td>Lala Fall</td>
+                                    <td>Salle Atelier A</td>
+                                </tr>
+                                <tr>
+                                    <td>16:15 - 17:30</td>
+                                    <td>Fireside chat : Construire une licorne africaine</td>
+                                    <td>Ahmed Fall</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>17:45 - 19:00</td>
+                                    <td>Hackathon : Lancement des défis</td>
+                                    <td>Équipes participantes</td>
+                                    <td>Salle Hackathon</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Contenu Jour 3 -->
+                    <div class="tab-content" id="day3" role="tabpanel" hidden>
+                        <table class="schedule__table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 - 10:30</td>
+                                    <td>Atelier : Product Design avec Figma</td>
+                                    <td>Mme Fall</td>
+                                    <td>Salle Atelier B</td>
+                                </tr>
+                                <tr>
+                                    <td>10:45 - 12:00</td>
+                                    <td>Panel : Investir dans la tech africaine</td>
+                                    <td>Investisseurs invités</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>12:00 - 13:30</td>
+                                    <td>Pause déjeuner</td>
+                                    <td>—</td>
+                                    <td>Espace Restauration</td>
+                                </tr>
+                                <tr>
+                                    <td>13:30 - 15:00</td>
+                                    <td>Hackathon : Finale & Délibérations</td>
+                                    <td>Équipes finalistes</td>
+                                    <td>Salle Hackathon</td>
+                                </tr>
+                                <tr>
+                                    <td>15:15 - 16:30</td>
+                                    <td>Keynote de clôture : Le futur de l'Afrique numérique</td>
+                                    <td>Dr. Aïssata Fall</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                                <tr>
+                                    <td>16:45 - 18:00</td>
+                                    <td>Cérémonie de clôture & Remise des prix</td>
+                                    <td>Comité d'organisation</td>
+                                    <td>Auditorium</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== SECTION THÉMATIQUES ===== -->
+            <section class="themes section">
+                <div class="container">
+                    <h2 class="section__title animate-on-scroll">Thématiques de la conférence</h2>
+                    <div class="themes__grid">
+                        <article class="theme-card animate-on-scroll">
+                            <div class="theme-card__icon"><i class="bi bi-cpu"></i></div>
+                            <h3 class="theme-card__title">IA & Tech</h3>
+                            <p class="theme-card__desc">Intelligence artificielle, machine learning, cloud computing et
+                                infrastructures numériques.</p>
+                        </article>
+                        <article class="theme-card animate-on-scroll">
+                            <div class="theme-card__icon"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h3 class="theme-card__title">Business</h3>
+                            <p class="theme-card__desc">Entrepreneuriat, levée de fonds, scaling et stratégies de
+                                croissance pour le marché africain.</p>
+                        </article>
+                        <article class="theme-card animate-on-scroll">
+                            <div class="theme-card__icon"><i class="bi bi-palette"></i></div>
+                            <h3 class="theme-card__title">Design</h3>
+                            <p class="theme-card__desc">UX/UI design, design thinking, accessibilité et création de
+                                produits centrés sur l'utilisateur.</p>
+                        </article>
+                        <article class="theme-card animate-on-scroll">
+                            <div class="theme-card__icon"><i class="bi bi-bar-chart-line"></i></div>
+                            <h3 class="theme-card__title">Data</h3>
+                            <p class="theme-card__desc">Data science, big data, analyse prédictive et gouvernance des
+                                données en Afrique.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__col">
+                        <h4 class="footer__title">AfriConnect Summit</h4>
+                        <p class="footer__text">La conférence panafricaine qui réunit développeurs, entrepreneurs et
+                            investisseurs pour façonner l'avenir tech du continent.</p>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Liens rapides</h4>
+                        <ul class="footer__links">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="intervenants.html">Intervenants</a></li>
+                            <li><a href="contact.html">Inscription</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4 class="footer__title">Suivez-nous</h4>
+                        <div class="footer__social">
+                            <a href="#" aria-label="Twitter/X" class="footer__social-link"><i
+                                    class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="LinkedIn" class="footer__social-link"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Instagram" class="footer__social-link"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="YouTube" class="footer__social-link"><i
+                                    class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="GitHub" class="footer__social-link"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>&copy; <span id="year"></span> Serigne Fallou Fall AfriConnect Summit. Tous droits réservés.</p>
+                </div>
+            </div>
+            <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+                <i class="bi bi-chevron-up"></i>
+            </button>
+        </footer>
+
+        <script src="js/main.js"></script>
 </body>
 
 </html>

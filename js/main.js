@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleNavbarScroll);
     // Vérification initiale
     handleNavbarScroll();
-    /*
+    
     // =====================================================================
     // 3. MENU HAMBURGER — Ouverture/fermeture sur mobile
     // =====================================================================
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Observe les éléments avec la classe .animate-on-scroll
      * et ajoute la classe .visible quand ils entrent dans le viewport.
      */
-  /*  const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
 
     const observerOptions = {
         threshold: 0.15,
@@ -165,13 +165,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================================================
     // 6. COMPTEURS ANIMÉS — Incrémentation au scroll
     // =====================================================================
-    const statNumbers = document.querySelectorAll('.stats__number');
+   // const statNumbers = document.querySelectorAll('.stats__number');
 
     /**
      * Anime le compteur d'un élément de 0 jusqu'à sa valeur cible.
      * @param {HTMLElement} element - L'élément contenant le nombre
      */
-   /* function animateCounter(element) {
+    function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-target'));
         const duration = 2000; // 2 secondes
         const step = Math.ceil(target / (duration / 16)); // ~60fps
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================================================
     const form = document.getElementById('registrationForm');
 
-    if (form) {
+   /* if (form) {
         /**
          * Affiche une erreur de validation sur un champ.
          * @param {string} fieldId - ID du champ

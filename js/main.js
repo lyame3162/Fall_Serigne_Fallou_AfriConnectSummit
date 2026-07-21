@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================================================
     // 9. VALIDATION DE FORMULAIRE
     // =====================================================================
-  /*  const form = document.getElementById('registrationForm');
+    const form = document.getElementById('registrationForm');
 
     if (form) {
         /**
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * @param {string} fieldId - ID du champ
          * @param {string} message - Message d'erreur
          */
-     /*   function showError(fieldId, message) {
+         function showError(fieldId, message) {
             const field = document.getElementById(fieldId);
             const errorSpan = document.getElementById(`${fieldId}-error`);
             if (field && errorSpan) {
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * Affiche un succès de validation sur un champ.
          * @param {string} fieldId - ID du champ
          */
-     /*   function showSuccess(fieldId) {
+         function showSuccess(fieldId) {
             const field = document.getElementById(fieldId);
             const errorSpan = document.getElementById(`${fieldId}-error`);
             if (field && errorSpan) {
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
          * Réinitialise les états visuels du formulaire.
          */
-     /*    function resetFormStyles() {
+         function resetFormStyles() {
             form.querySelectorAll('.form__input').forEach(input => {
                 input.classList.remove('error', 'success');
             });

@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================================================
     // 6. COMPTEURS ANIMÉS — Incrémentation au scroll
     // =====================================================================
-   // const statNumbers = document.querySelectorAll('.stats__number');
+    const statNumbers = document.querySelectorAll('.stats__number');
 
     /**
      * Anime le compteur d'un élément de 0 jusqu'à sa valeur cible.
@@ -277,15 +277,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // =====================================================================
     // 9. VALIDATION DE FORMULAIRE
     // =====================================================================
-    const form = document.getElementById('registrationForm');
+  /*  const form = document.getElementById('registrationForm');
 
-   /* if (form) {
+    if (form) {
         /**
          * Affiche une erreur de validation sur un champ.
          * @param {string} fieldId - ID du champ
          * @param {string} message - Message d'erreur
          */
-      /*  function showError(fieldId, message) {
+     /*   function showError(fieldId, message) {
             const field = document.getElementById(fieldId);
             const errorSpan = document.getElementById(`${fieldId}-error`);
             if (field && errorSpan) {
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * Affiche un succès de validation sur un champ.
          * @param {string} fieldId - ID du champ
          */
-      /*  function showSuccess(fieldId) {
+     /*   function showSuccess(fieldId) {
             const field = document.getElementById(fieldId);
             const errorSpan = document.getElementById(`${fieldId}-error`);
             if (field && errorSpan) {
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
          * Réinitialise les états visuels du formulaire.
          */
-      /*  function resetFormStyles() {
+     /*    function resetFormStyles() {
             form.querySelectorAll('.form__input').forEach(input => {
                 input.classList.remove('error', 'success');
             });
@@ -443,4 +443,4 @@ document.addEventListener('DOMContentLoaded', () => {
         el.textContent = currentYear;
     });
 
-//}); // Fin DOMContentLoaded
+}); // Fin DOMContentLoaded

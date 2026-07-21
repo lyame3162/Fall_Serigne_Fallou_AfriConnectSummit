@@ -1,4 +1,15 @@
 /* ----- VARIABLES CSS (Custom Properties) ----- */
+.logo {
+  display:flex;
+  align-items: center ;
+  gap: 20px;
+  text-transform: none;
+}
+.site-logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
 :root {
   /* Couleurs principales — palette 4 couleurs + variantes */
   --color-primary: #7168b4;

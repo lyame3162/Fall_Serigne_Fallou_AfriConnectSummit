@@ -22,31 +22,13 @@
 </head>
 
 <body>
-<!DOCTYPE html>
-<html lang="fr" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez les 9 intervenants de l'AfriConnect Summit 2026 — experts IA, business, design et data.">
-    <title>Intervenants — AfriConnect Summit 2026</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
     <!-- ===== HEADER / NAVBAR ===== -->
     <header id="navbar" class="navbar">
         <nav class="navbar__container" aria-label="Navigation principale">
             <a href="index.html" class="navbar__logo" aria-label="Accueil AfriConnect Summit">
-                <i class="bi bi-globe2"></i>
+                <!-- <a href="intervenant.html" class="logo"> -->
+                    <img src="images/logo.png" alt="logo Africonnect 2026" class="site-logo">
                 <span>AfriConnect <span class="navbar__logo-year">2026</span></span>
             </a>
             <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Menu de navigation" aria-expanded="false">
@@ -83,7 +65,7 @@
         </section>
 
         <!-- ===== FILTRAGE DYNAMIQUE ===== -->
-        <section class="speakers section">
+        <div class="speakers section">
             <div class="container">
                 <div class="filters animate-on-scroll">
                     <button class="filter-btn active" data-filter="all">Tous</button>
@@ -100,7 +82,7 @@
                         <div class="speaker-card__img-wrapper">
                             <img src="images/speaker-1.jpg" alt="Portrait de Aïssata Fall" class="speaker-card__img" loading="lazy">
                         </div>
-                        <h3 class="speaker-card__name">Aïssata Fall</h3>
+                        <h2 class="speaker-card__name">Aïssata Fall</h2>
                         <p class="speaker-card__role">IA & Machine Learning</p>
                         <p class="speaker-card__country"><i class="bi bi-geo-alt"></i> Sénégal</p>
                     </article>
@@ -181,7 +163,7 @@
                     </article>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- ===== FOOTER ===== -->

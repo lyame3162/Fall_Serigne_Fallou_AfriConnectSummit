@@ -1,12 +1,12 @@
 /* ----- VARIABLES CSS (Custom Properties) ----- */
 :root {
   /* Couleurs principales — palette 4 couleurs + variantes */
-  --color-primary: #6c5ce7;
-  --color-primary-dark: #5a4bd1;
+  --color-primary: #7168b4;
+  --color-primary-dark: #7973ac;
   --color-primary-light: #8b7cf7;
-  --color-secondary: #00d2d3;
+  --color-secondary: #44baba;
   --color-secondary-dark: #00b5b6;
-  --color-accent: #fdcb6e;
+  --color-accent: #c19f62;
 
   /* Couleurs de fond (Light mode) */
   --bg-primary: #fafafa;
@@ -15,8 +15,8 @@
   --bg-hero: #0f0f1a;
 
   /* Couleurs de texte */
-  --text-primary: #1a1a2e;
-  --text-secondary: #555570;
+  --text-primary: #36365c;
+  --text-secondary: #626285;
   --text-muted: #8888a0;
   --text-inverse: #ffffff;
 
@@ -25,10 +25,10 @@
   --border-light: #f0f0f5;
 
   /* Ombres */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 2px 8px rgba(35, 32, 32, 0.06);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 30px rgba(108, 92, 231, 0.3);
+  --shadow-glow: 0 0 30px rgba(120, 112, 183, 0.3);
 
   /* Typographie */
   --font-heading: "Space Grotesk", sans-serif;

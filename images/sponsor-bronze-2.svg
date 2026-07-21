@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Dégradé Bronze Métallique Principal -->
+    <linearGradient id="bronzeLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5A97B"/>
+      <stop offset="25%" stop-color="#C77D4C"/>
+      <stop offset="50%" stop-color="#F3C39D"/>
+      <stop offset="75%" stop-color="#9E5928"/>
+      <stop offset="100%" stop-color="#5A3010"/>
+    </linearGradient>
+
+    <!-- Dégradé Bronze Secondaire (Accents) -->
+    <linearGradient id="bronzeAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C4A1B"/>
+      <stop offset="50%" stop-color="#E5A97B"/>
+      <stop offset="100%" stop-color="#A66130"/>
+    </linearGradient>
+
+    <!-- Dégradé Fond Sombre -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1E222A"/>
+      <stop offset="70%" stop-color="#0E1015"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+
+    <!-- Vert Officiel Twiga Foods -->
+    <linearGradient id="twigaGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2ECC71"/>
+      <stop offset="100%" stop-color="#27AE60"/>
+    </linearGradient>
+
+    <!-- Filtres d'ombre et de lueur -->
+    <filter id="bronzeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Fond Principal -->
+  <rect width="600" height="600" rx="30" fill="url(#bgGrad)"/>
+
+  <!-- Cercles décoratifs extérieurs -->
+  <circle cx="300" cy="300" r="260" fill="none" stroke="url(#bronzeLinear)" stroke-width="1.5" opacity="0.3" stroke-dasharray="4 8"/>
+  <circle cx="300" cy="300" r="245" fill="none" stroke="url(#bronzeLinear)" stroke-width="2" opacity="0.5"/>
+  <circle cx="300" cy="300" r="235" fill="none" stroke="#2ECC71" stroke-width="1" opacity="0.3"/>
+
+  <!-- Écusson Hexagonal Bronze -->
+  <polygon points="300,70 470,168 470,364 300,462 130,364 130,168" 
+           fill="#12151B" 
+           stroke="url(#bronzeLinear)" 
+           stroke-width="5" 
+           filter="url(#shadow)"/>
+
+  <!-- Ligne intérieure pointillée -->
+  <polygon points="300,82 458,174 458,356 300,448 142,356 142,174" 
+           fill="none" 
+           stroke="url(#bronzeAccent)" 
+           stroke-width="1.5" 
+           stroke-dasharray="6,5" 
+           opacity="0.7"/>
+
+  <!-- Étoile de niveau Bronze (1 seule étoile) -->
+  <g fill="url(#bronzeLinear)" filter="url(#bronzeGlow)">
+    <polygon points="300,103 304,115 317,115 306,122 310,134 300,126 290,134 294,122 283,115 296,115"/>
+  </g>
+
+  <!-- LOGO TWIGA FOODS (Feuille / Symbole Twiga) -->
+  <g transform="translate(195, 150)">
+    <!-- Fond de support pour l'icône -->
+    <rect x="0" y="0" width="210" height="115" rx="16" fill="#1A1F29" stroke="url(#bronzeAccent)" stroke-width="1"/>
+    
+    <!-- Icône Feuille Stylisée Twiga -->
+    <g transform="translate(105, 58)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="32" fill="url(#twigaGreen)"/>
+      <!-- Motif de feuille / croissance interne -->
+      <path d="M -12,12 C -12,-15 15,-18 15,-18 C 15,-18 18,12 -12,12 Z" fill="#FFFFFF"/>
+      <path d="M -8,8 C -2,-10 12,-12 12,-12" stroke="url(#twigaGreen)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Texte "TWIGA" -->
+  <text x="300" y="312" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="34" 
+        fill="#FFFFFF" 
+        text-anchor="middle" 
+        letter-spacing="4">
+    TWIGA
+  </text>
+
+  <!-- Bannière SPONSOR BRONZE -->
+  <g transform="translate(0, 360)" filter="url(#shadow)">
+    <!-- Arrière-plan ruban -->
+    <path d="M 160,35 L 140,55 L 160,75 L 440,75 L 460,55 L 440,35 Z" fill="#0A0D12" stroke="url(#bronzeLinear)" stroke-width="2"/>
+    
+    <!-- Plaque Bronze Principale -->
+    <rect x="170" y="40" width="260" height="30" rx="15" fill="url(#bronzeLinear)"/>
+    
+    <!-- Texte SPONSOR BRONZE -->
+    <text x="300" y="60" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="15" 
+          fill="#0D1117" 
+          text-anchor="middle" 
+          letter-spacing="3">
+      SPONSOR BRONZE
+    </text>
+  </g>
+
+  <!-- Nœuds Tech bronze aux coins -->
+  <circle cx="130" cy="168" r="4" fill="url(#bronzeLinear)"/>
+  <circle cx="470" cy="168" r="4" fill="url(#bronzeLinear)"/>
+  <circle cx="130" cy="364" r="4" fill="url(#bronzeLinear)"/>
+  <circle cx="470" cy="364" r="4" fill="url(#bronzeLinear)"/>
+</svg>

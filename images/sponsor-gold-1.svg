@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Dégradé Doré Chic -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF953F" />
+      <stop offset="25%" stop-color="#FCF6BA" />
+      <stop offset="50%" stop-color="#B38728" />
+      <stop offset="75%" stop-color="#FBF5B7" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+
+    <!-- Dégradé Sombre pour le Fond -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A202C" />
+      <stop offset="100%" stop-color="#0A0D12" />
+    </radialGradient>
+    
+    <!-- Ombre portée pour donner du relief -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Fond circulaire sombre -->
+  <circle cx="200" cy="200" r="180" fill="url(#bgGradient)" stroke="url(#goldGradient)" stroke-width="4" />
+
+  <!-- Badge / Écusson Doré Intérieur -->
+  <path d="M 120,90 L 280,90 L 280,220 C 280,290 200,330 200,330 C 200,330 120,290 120,220 Z" 
+        fill="none" 
+        stroke="url(#goldGradient)" 
+        stroke-width="3" 
+        stroke-dasharray="6,4" 
+        filter="url(#dropShadow)" />
+
+  <!-- Étoiles de niveau Gold (3 étoiles) -->
+  <g fill="url(#goldGradient)">
+    <!-- Étoile Gauche -->
+    <polygon points="160,110 163,118 171,118 165,123 167,131 160,126 153,131 155,123 149,118 157,118" />
+    <!-- Étoile Centre (plus grande) -->
+    <polygon points="200,103 204,113 215,113 206,119 209,129 200,123 191,129 194,119 185,113 196,113" />
+    <!-- Étoile Droite -->
+    <polygon points="240,110 243,118 251,118 245,123 247,131 240,126 233,131 235,123 229,118 237,118" />
+  </g>
+
+  <!-- Silhouette Stylisée Tech-Afrique -->
+  <path d="M 180,145 
+           C 195,145 220,150 225,160 
+           C 230,170 215,185 220,195 
+           C 225,205 210,225 200,235 
+           C 195,240 190,230 185,220 
+           C 180,210 170,190 170,180 
+           C 170,170 165,155 180,145 Z" 
+        fill="url(#goldGradient)" 
+        opacity="0.9" />
+
+  <!-- Raccords Tech / Circuits sur la carte -->
+  <circle cx="190" cy="165" r="3" fill="#1A202C" />
+  <circle cx="210" cy="185" r="3" fill="#1A202C" />
+  <circle cx="195" cy="210" r="3" fill="#1A202C" />
+  <line x1="190" y1="165" x2="210" y2="185" stroke="#1A202C" stroke-width="1.5" />
+  <line x1="210" y1="185" x2="195" y2="210" stroke="#1A202C" stroke-width="1.5" />
+
+  <!-- Textes -->
+  <!-- TECHAFRIQUE -->
+  <text x="200" y="270" 
+        font-family="'Segoe UI', Roboto, Helvetica, sans-serif" 
+        font-weight="900" 
+        font-size="20" 
+        fill="#FFFFFF" 
+        text-anchor="middle" 
+        letter-spacing="3">
+    TECHAFRIQUE
+  </text>
+
+  <!-- SPONSOR GOLD -->
+  <rect x="130" y="285" width="140" height="25" rx="12.5" fill="url(#goldGradient)" />
+  <text x="200" y="302" 
+        font-family="'Segoe UI', Roboto, Helvetica, sans-serif" 
+        font-weight="800" 
+        font-size="12" 
+        fill="#0A0D12" 
+        text-anchor="middle" 
+        letter-spacing="2">
+    SPONSOR GOLD
+  </text>
+</svg>
